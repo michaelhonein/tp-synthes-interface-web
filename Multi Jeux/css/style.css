@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(45deg, #ff0000, #0004ff);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  justify-content: center;
+
+  
+
+}
+
+.header-logo {
+  width:  70px;
+  height: 70px;
+}
+
+.header-titre {
+  color: white;
+  font-size: 2rem;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #0004ff, #fc0000);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
