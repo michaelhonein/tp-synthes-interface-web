@@ -27,3 +27,37 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+.choix-titre {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.choix-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.choix-jeu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jeu-image {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.jeu-lien {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
