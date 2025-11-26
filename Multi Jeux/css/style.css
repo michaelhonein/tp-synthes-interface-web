@@ -1,17 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #0004ff, #fc0000);
+  min-height: 100vh;
+}
+
 .header {
   display: flex;
   gap: 20px;
   background: linear-gradient(45deg, #ff0000, #0004ff);
   padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
   justify-content: center;
-
-  
-
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
 
 .header-logo {
-  width:  70px;
+  width: 70px;
   height: 70px;
 }
 
@@ -21,43 +26,70 @@
   font-family: "Press Start 2P", sans-serif;
 }
 
-body {
-  margin: 0;
-  background: linear-gradient(45deg, #0004ff, #fc0000);
-  background-repeat: no-repeat;
-  height: 100vh;
+.intro h2 {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  font-size: 32px;
 }
 
-.choix-titre {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 30px;
-  font-weight: bold;
+.choix-section {
+  margin-top: 50px;
 }
 
 .choix-container {
-  margin-top: 60px;
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 120px;
+  flex-wrap: wrap;
 }
 
-.choix-jeu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.choix-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform .25s, box-shadow .25s;
 }
 
-.jeu-image {
-  width: 140px;
-  height: auto;
-  margin-bottom: 20px;
+.choix-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
 }
 
-.jeu-lien {
-  font-size: 24px;
+.choix-gif {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.choix-card h3 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.choix-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: linear-gradient(45deg, #0004ff, #ff0000);
+  color: white;
   text-decoration: none;
-  color: black;
-  font-weight: 600;
+  font-size: 18px;
+  border-radius: 12px;
+  transition:.25s, transform .25s;
 }
 
+.choix-btn:hover {
+  transform: translateY(-5px);
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+  padding-bottom: 40px;
+  font-size: 14px;
+}

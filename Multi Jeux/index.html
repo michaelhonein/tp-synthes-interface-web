@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Multi-Jeux</title>
+<html lang="fr">
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />
-      <h1 class="header-titre">Multi-Jeux</h1>
-    </header>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Jeux</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <h2 class="choix-titre">Bonjour, choisissez votre jeu</h2>
+<body>
+  <header class="header">
+    <img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />
+    <h1 class="header-titre">Multi-Jeux</h1>
+  </header>
 
+  <section class="intro">
+    <h2>Choisissez votre jeu:</h2>
+  </section>
+
+  <section class="choix-section">
     <div class="choix-container">
-      <div class="choix-jeu">
-        <img src="" alt="Jeu 1" class="jeu-image" />
-        <a href="" class="jeu-lien">Jeu 1</a>
-      </div>
+      <article class="choix-card">
+        <img src="https://i.gifer.com/MfSf.gif" class="choix-gif" alt="Roche Papier Ciseaux">
+        <h3>Roche Papier Ciseaux</h3>
+        <a href="rpc.html" class="choix-btn">Jouer</a>
+      </article>
 
-      <div class="choix-jeu">
-        <img src="" alt="Jeu 2" class="jeu-image" />
-        <a href="" class="jeu-lien">Jeu 2</a>
-      </div>
+      <article class="choix-card">
+        <img src="https://i.gifer.com/72gi.gif" class="choix-gif" alt="Quiz">
+        <h3>Quiz</h3>
+        <a href="quiz.html" class="choix-btn">Jouer</a>
+      </article>
     </div>
-  </body>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Multi-Jeux</p>
+  </footer>
+</body>
 </html>
