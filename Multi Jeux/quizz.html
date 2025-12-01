@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Jeux - Quizz</title>
+</head>
+
+<body>
+    Q1. What is 2+3<br>
+    <input type="radio" name="question1" id="correct1">5<br>
+    <input type="radio" name="question1">8<br>
+    <input type="radio" name="question1">10<br>
+    <input type="radio" name="question1">9<br>
+
+    Q2. What is 8+3<br>
+    <input type="radio" name="question2">2<br>
+    <input type="radio" name="question2">8<br>
+    <input type="radio" name="question2" id="correct2">11<br>
+    <input type="radio" name="question2">9<br>
+
+    Q3. What is 28+3<br>
+    <input type="radio" name="question3">15<br>
+    <input type="radio" name="question3" id="correct3">31<br>
+    <input type="radio" name="question3">10<br>
+    <input type="radio" name="question3">19<br>
+
+    <input type="submit" name="submit" value="submitQuizz" onclick="result()">
+    <script type="text/javascript">
+        function result() {
+            var score = 0;
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                score++;
+            }
+            alert("Your score is :" + score)
+
+        }
+
+    </script>
+</body>
+
+</html>
