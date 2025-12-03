@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Papier Ciseaux</title>
+    <link rel="stylesheet" href="css/rpc.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-titre">Roche Papier Ciseaux</h1>
+        <img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />
+    </header>
+    <div class="game-container">
+
+        <h1>Faite votre choix!</h1>
+
+        <div class="buttons">
+            <button onclick="jouer('roche')">Roche</button>
+            <button onclick="jouer('papier')">Papier</button>
+            <button onclick="jouer('ciseaux')">Ciseaux</button>
+        </div>
+
+        <div class="battle">
+
+            <div class="player">
+                <h3>Vous</h3>
+                <div id="user-choice" class="choice-icon">❓</div>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="computer">
+                <h3>Ordinateur</h3>
+                <div id="computer-choice" class="choice-icon">❓</div>
+            </div>
+
+        </div>
+
+        <div class="result" id="result">-</div>
+
+        <div class="scoreboard">
+            <p>Vous: <span id="player-score">0</span></p>
+            <p>Ordinateur: <span id="computer-score">0</span></p>
+        </div>
+    </div>
+
+    <a href="./index.html">
+        <button class="btn-retour">Retour à l'accueil</button>
+    </a>
+
+    <script src="rpc.js"></script>
+</body>
+
+</html>
