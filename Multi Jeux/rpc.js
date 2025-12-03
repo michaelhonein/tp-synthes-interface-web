@@ -49,13 +49,10 @@ function jouer(choixJoueur) {
     // Texte du résultat
     if (resultat === "win") {
         texteResultat.textContent = "Vous gagnez !";
-        texteResultat.classList.add("win");
     } else if (resultat === "lose") {
         texteResultat.textContent = "Vous perdez !";
-        texteResultat.classList.add("lose");
     } else {
         texteResultat.textContent = "Égalité !";
-        texteResultat.classList.add("draw");
     }
 
     // Mise à jour affichage des scores
