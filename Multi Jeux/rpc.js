@@ -21,9 +21,6 @@ function jouer(choixJoueur) {
     const iconeOrdi = document.getElementById("computer-choice");
     const texteResultat = document.getElementById("result");
 
-    // Reset classes
-    texteResultat.className = "result";
-
     // Affichage icônes
     iconeJoueur.textContent = emojis[choixJoueur];
     iconeOrdi.textContent = emojis[choixOrdi];

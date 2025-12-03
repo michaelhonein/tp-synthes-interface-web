@@ -89,18 +89,6 @@ h1 {
     font-weight: bold;
 }
 
-.result.win {
-    color: #00ff88;
-}
-
-.result.lose {
-    color: #ff4d4d;
-}
-
-.result.draw {
-    color: #aaa;
-}
-
 .scoreboard {
     margin-top: 20px;
     font-size: 18px;
