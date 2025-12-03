@@ -1,49 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Jeux - Quizz</title>
+    <title>Multi-Jeux - Quiz</title>
 </head>
 
 <body>
-    Q1. What is 2+3<br>
-    <input type="radio" name="question1" id="correct1">5<br>
-    <input type="radio" name="question1">8<br>
-    <input type="radio" name="question1">10<br>
-    <input type="radio" name="question1">9<br>
 
-    Q2. What is 8+3<br>
-    <input type="radio" name="question2">2<br>
-    <input type="radio" name="question2">8<br>
-    <input type="radio" name="question2" id="correct2">11<br>
-    <input type="radio" name="question2">9<br>
+    <header class="header">
+        <h1 class="header-titre">Quizz</h1>
+        <!--<img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />-->
+    </header>
 
-    Q3. What is 28+3<br>
-    <input type="radio" name="question3">15<br>
-    <input type="radio" name="question3" id="correct3">31<br>
-    <input type="radio" name="question3">10<br>
-    <input type="radio" name="question3">19<br>
+    <section class="quiz-container">
+        <p id="dernierScore"></p>
+        <h3>Q1. Combien font 2 + 3 ?</h3>
+        <input type="radio" name="q1" id="correct1"> 5<br>
+        <input type="radio" name="q1"> 8<br>
+        <input type="radio" name="q1"> 10<br>
+        <input type="radio" name="q1"> 9<br>
 
-    <input type="submit" name="submit" value="submitQuizz" onclick="result()">
-    <script type="text/javascript">
-        function result() {
-            var score = 0;
-            if (document.getElementById('correct1').checked) {
-                score++;
-            }
-            if (document.getElementById('correct2').checked) {
-                score++;
-            }
-            if (document.getElementById('correct3').checked) {
-                score++;
-            }
-            alert("Your score is :" + score)
+        <h3>Q2. Combien font 8 + 3 ?</h3>
+        <input type="radio" name="q2"> 2<br>
+        <input type="radio" name="q2"> 8<br>
+        <input type="radio" name="q2" id="correct2"> 11<br>
+        <input type="radio" name="q2"> 9<br>
 
-        }
+        <h3>Q3. Combien font 28 + 3 ?</h3>
+        <input type="radio" name="q3"> 15<br>
+        <input type="radio" name="q3" id="correct3"> 31<br>
+        <input type="radio" name="q3"> 10<br>
+        <input type="radio" name="q3"> 19<br>
 
-    </script>
+        <p id="score"></p>
+
+        <button id="submitBtn">Valider</button>
+
+    </section>
+
+    <script src="quizz.js"></script>
 </body>
 
 </html>
