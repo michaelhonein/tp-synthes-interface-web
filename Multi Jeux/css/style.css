@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(45deg, #0004ff, #fc0000);
   min-height: 100vh;
 }
@@ -50,13 +50,13 @@ body {
   border-radius: 20px;
   width: 260px;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transition: transform .25s, box-shadow .25s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .choix-card:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .choix-gif {
@@ -79,7 +79,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   border-radius: 12px;
-  transition:.25s, transform .25s;
+  transition: 0.25s, transform 0.25s;
 }
 
 .choix-btn:hover {
