@@ -5,39 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Jeux - Quiz</title>
+    <link rel="stylesheet" href="css/quizz.css">
 </head>
 
 <body>
 
     <header class="header">
-        <h1 class="header-titre">Quizz</h1>
-        <!--<img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />-->
+        <div class="header-content">
+            <h1 class="header-titre">Quizz</h1>
+            <img src="imageapp/Multi-Jeux.png" alt="Logo Multi-Jeux" class="header-logo" />
+        </div>
     </header>
 
     <section class="quiz-container">
         <p id="dernierScore"></p>
         <h3>Q1. Combien font 2 + 3 ?</h3>
-        <input type="radio" name="q1" id="correct1"> 5<br>
-        <input type="radio" name="q1"> 8<br>
-        <input type="radio" name="q1"> 10<br>
-        <input type="radio" name="q1"> 9<br>
+        <div class="question-block">
+            <label><input type="radio" name="q1" id="correct1"> 5</label>
+            <label><input type="radio" name="q1"> 8</label>
+            <label><input type="radio" name="q1"> 10</label>
+            <label><input type="radio" name="q1"> 9</label>
+        </div>
 
-        <h3>Q2. Combien font 8 + 3 ?</h3>
-        <input type="radio" name="q2"> 2<br>
-        <input type="radio" name="q2"> 8<br>
-        <input type="radio" name="q2" id="correct2"> 11<br>
-        <input type="radio" name="q2"> 9<br>
+        <h3>Q2. Qui est le meilleur prof ?</h3>
+        <div class="question-block">
+            <label><input type="radio" name="q2"> Akram Nasr</label>
+            <label><input type="radio" name="q2"> Le prof d'interface web</label>
+            <label><input type="radio" name="q2"> Le prof avec des tatoos</label>
+            <label><input type="radio" name="q2" id="correct2"> Aucune de ces reponses</label>
+        </div>
 
-        <h3>Q3. Combien font 28 + 3 ?</h3>
-        <input type="radio" name="q3"> 15<br>
-        <input type="radio" name="q3" id="correct3"> 31<br>
-        <input type="radio" name="q3"> 10<br>
-        <input type="radio" name="q3"> 19<br>
+        <h3>Q3. Combien font 8 + 3 ?</h3>
+        <div class="question-block">
+            <label><input type="radio" name="q3"> 2</label>
+            <label><input type="radio" name="q3"> 8</label>
+            <label><input type="radio" name="q3" id="correct3"> 11</label>
+            <label><input type="radio" name="q3"> 9</label>
+        </div>
 
+        <h3>Q4. C'est qui les meilleurs étudiants</h3>
+        <div class="question-block">
+            <label><input type="radio" name="q4" id="correct4.1"> Michael Honein et Rayan Lfii</label>
+            <label><input type="radio" name="q4" id="correct4.2">Les élèves avec les code 202354973 et 202497949 </label>
+            <label><input type="radio" name="q4" id="correct4.3"> les createurs de ce quizz</label>
+            <label><input type="radio" name="q4" id="correct4.4"> Toutes ces reponses</label>
+        </div>
+
+        <h3>Q5. Combien font 28 + 3 ?</h3>
+        <div class="question-block">
+            <label><input type="radio" name="q5"> 15</label>
+            <label><input type="radio" name="q5" id="correct5"> 31</label>
+            <label><input type="radio" name="q5"> 10</label>
+            <label><input type="radio" name="q5"> 19</label>
+        </div>
+
+
+       
+
+
+        
+
+
+        
         <p id="score"></p>
 
         <button id="submitBtn">Valider</button>
 
+        <a href="./index.html">
+            <button class="btn-retour">Retour à l'accueil</button>
+        </a>
     </section>
 
     <script src="quizz.js"></script>
