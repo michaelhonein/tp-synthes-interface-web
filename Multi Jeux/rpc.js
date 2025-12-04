@@ -5,6 +5,28 @@ let scoreOrdi = parseInt(localStorage.getItem("scoreOrdi")) || 0;
 // Mise à jour affichage initial
 document.getElementById("player-score").textContent = scoreJoueur;
 document.getElementById("computer-score").textContent = scoreOrdi;
+const btnRoche = document.querySelector("#roche");
+const btnCiseau = document.querySelector("#ciseau");
+const btnPapier = document.querySelector("#papier");
+
+btnCiseau.addEventListener("click",()=>{
+    setTimeout(()=>{
+        jouer('ciseaux');
+    },100);
+    
+})
+btnPapier.addEventListener("click",()=>{
+    setTimeout(()=>{
+        jouer('papier');
+    },100);
+    
+})
+btnRoche.addEventListener("click",()=>{
+    setTimeout(()=>{
+        jouer('roche');
+    },100);
+})
+
 
 function jouer(choixJoueur) {
 

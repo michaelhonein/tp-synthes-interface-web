@@ -1,0 +1,193 @@
+[
+    {
+        "question": "Combien font 2 + 3 ?",
+        "options": [
+            "5",
+            "8",
+            "10",
+            "9"
+        ],
+        "correctIndex": 0
+    },
+    {
+        "question": "Qui est le meilleur professeur ?",
+        "options": [
+            "Akram Nasr",
+            "Le prof d'interface web",
+            "Le prof avec des tatouages",
+            "Aucun"
+        ],
+        "correctIndex": 3
+    },
+    {
+        "question": "Combien font 8 + 3 ?",
+        "options": [
+            "2",
+            "8",
+            "11",
+            "9"
+        ],
+        "correctIndex": 2
+    },
+    
+    {
+        "question": "Quel est le meilleur éditeur de texte ?",
+        "options": [
+            "Word",
+            "Discovro",
+            "Google Docs",
+            "Excel"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quelle est la capitale de la France ?",
+        "options": [
+            "Paris",
+            "Marseille",
+            "Lyon",
+            "Nice"
+        ],
+        "correctIndex": 0
+    },
+    {
+        "question": "Combien y a-t-il de continents ?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "4"
+        ],
+        "correctIndex": 2
+    },
+    {
+        "question": "Quel est l'animal le plus rapide du monde ?",
+        "options": [
+            "Tigre",
+            "Guépard",
+            "Jaguar",
+            "Lion"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quel langage sert à styliser une page web ?",
+        "options": [
+            "HTML",
+            "CSS",
+            "Python",
+            "Java"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quelle planète est la plus proche du Soleil ?",
+        "options": [
+            "Mars",
+            "Mercure",
+            "Vénus",
+            "Terre"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Qui a créé la théorie de la relativité ?",
+        "options": [
+            "Newton",
+            "Einstein",
+            "Tesla",
+            "Galilée"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quel est le plus grand océan du monde ?",
+        "options": [
+            "Pacifique",
+            "Atlantique",
+            "Indien",
+            "Arctique"
+        ],
+        "correctIndex": 0
+    },
+    {
+        "question": "Combien font 12 x 5 ?",
+        "options": [
+            "60",
+            "55",
+            "65",
+            "50"
+        ],
+        "correctIndex": 0
+    },
+    {
+        "question": "Quelle est la capitale du Japon ?",
+        "options": [
+            "Osaka",
+            "Tokyo",
+            "Kyoto",
+            "Nagoya"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quel est l'animal le plus grand du monde ?",
+        "options": [
+            "Éléphant",
+            "Baleine bleue",
+            "Girafe",
+            "Hippopotame"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quel est le sport le plus populaire au monde ?",
+        "options": [
+            "Basketball",
+            "Football",
+            "Cricket",
+            "Tennis"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Combien de dents possède un adulte ?",
+        "options": [
+            "20",
+            "24",
+            "32",
+            "36"
+        ],
+        "correctIndex": 2
+    },
+    {
+        "question": "Dans quel langage écrit-on les pages web ?",
+        "options": [
+            "Java",
+            "HTML",
+            "C++",
+            "Swift"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "Quel est le plus grand pays du monde ?",
+        "options": [
+            "États-Unis",
+            "Chine",
+            "Russie",
+            "Canada"
+        ],
+        "correctIndex": 2
+    },
+    {
+        "question": "Combien font 15 + 7 ?",
+        "options": [
+            "22",
+            "20",
+            "18",
+            "25"
+        ],
+        "correctIndex": 0
+    }
+]

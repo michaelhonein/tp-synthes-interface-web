@@ -18,59 +18,68 @@
     </header>
 
     <section class="quiz-container">
+
         <p id="dernierScore"></p>
-        <h3>Q1. Combien font 2 + 3 ?</h3>
+
+        <!-- QUESTION 1 -->
+        <h3 id="question1"></h3>
         <div class="question-block">
-            <label><input type="radio" name="q1" id="correct1"> 5</label>
-            <label><input type="radio" name="q1"> 8</label>
-            <label><input type="radio" name="q1"> 10</label>
-            <label><input type="radio" name="q1"> 9</label>
+            <label><input type="radio" name="q1" id="q1r1"></label>
+            <label><input type="radio" name="q1" id="q1r2"></label>
+            <label><input type="radio" name="q1" id="q1r3"></label>
+            <label><input type="radio" name="q1" id="q1r4"></label>
         </div>
 
-        <h3>Q2. Qui est le meilleur prof ?</h3>
+        <!-- QUESTION 2 -->
+        <h3 id="question2"></h3>
         <div class="question-block">
-            <label><input type="radio" name="q2"> Akram Nasr</label>
-            <label><input type="radio" name="q2"> Le prof d'interface web</label>
-            <label><input type="radio" name="q2"> Le prof avec des tatoos</label>
-            <label><input type="radio" name="q2" id="correct2"> Aucune de ces reponses</label>
+            <label><input type="radio" name="q2" id="q2r1"></label>
+            <label><input type="radio" name="q2" id="q2r2"></label>
+            <label><input type="radio" name="q2" id="q2r3"></label>
+            <label><input type="radio" name="q2" id="q2r4"></label>
         </div>
 
-        <h3>Q3. Combien font 8 + 3 ?</h3>
+        <!-- QUESTION 3 -->
+        <h3 id="question3"></h3>
         <div class="question-block">
-            <label><input type="radio" name="q3"> 2</label>
-            <label><input type="radio" name="q3"> 8</label>
-            <label><input type="radio" name="q3" id="correct3"> 11</label>
-            <label><input type="radio" name="q3"> 9</label>
+            <label><input type="radio" name="q3" id="q3r1"></label>
+            <label><input type="radio" name="q3" id="q3r2"></label>
+            <label><input type="radio" name="q3" id="q3r3"></label>
+            <label><input type="radio" name="q3" id="q3r4"></label>
         </div>
 
-        <h3>Q4. C'est qui les meilleurs étudiants</h3>
+        <!-- QUESTION 4 -->
+        <h3 id="question4"></h3>
         <div class="question-block">
-            <label><input type="radio" name="q4" id="correct4.1"> Michael Honein et Rayan Lfii</label>
-            <label><input type="radio" name="q4" id="correct4.2">Les élèves avec les code 202354973 et 202497949 </label>
-            <label><input type="radio" name="q4" id="correct4.3"> les createurs de ce quizz</label>
-            <label><input type="radio" name="q4" id="correct4.4"> Toutes ces reponses</label>
+            <label><input type="radio" name="q4" id="q4r1"></label>
+            <label><input type="radio" name="q4" id="q4r2"></label>
+            <label><input type="radio" name="q4" id="q4r3"></label>
+            <label><input type="radio" name="q4" id="q4r4"></label>
         </div>
 
-        <h3>Q5. Quel est le meilleur éditeur de texte?</h3>
+        <!-- QUESTION 5 -->
+        <h3 id="question5"></h3>
         <div class="question-block">
-            <label><input type="radio" name="q5"> Word</label>
-            <label><input type="radio" name="q5" id="correct5"> Discovro</label>
-            <label><input type="radio" name="q5"> Google Doc</label>
-            <label><input type="radio" name="q5"> Excel</label>
+            <label><input type="radio" name="q5" id="q5r1"></label>
+            <label><input type="radio" name="q5" id="q5r2"></label>
+            <label><input type="radio" name="q5" id="q5r3"></label>
+            <label><input type="radio" name="q5" id="q5r4"></label>
         </div>
 
         <p id="score"></p>
 
-        <button id="submitBtn" >Valider</button>
-        
+        <button id="submitBtn">Valider</button>
         <button id="corrigerBtn" class="btn">Montrer le corrigé</button>
-        <button id="restartBtn"class="btn">Recommencer le test</button>
+        <button id="restartBtn" class="btn">Recommencer le test</button>
+
         <a href="./index.html">
-            <button class="btn">Retour à l'accueil</button>
+            <button class="btn">Retour</button>
         </a>
+
     </section>
 
     <script src="quizz.js"></script>
+
 </body>
 
 </html>

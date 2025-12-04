@@ -1,87 +1,96 @@
-const elements = {
-  correct1: document.getElementById("correct1"),
-  correct2: document.getElementById("correct2"),
-  correct3: document.getElementById("correct3"),
-  correct4a: document.getElementById("correct4.1"),
-  correct4b: document.getElementById("correct4.2"),
-  correct4c: document.getElementById("correct4.3"),
-  correct4d: document.getElementById("correct4.4"),
-  correct5: document.getElementById("correct5"),
+const zoneScore = document.getElementById("score");
+const zoneDernierScore = document.getElementById("dernierScore");
+const boutonValider = document.getElementById("submitBtn");
+const boutonCorriger = document.getElementById("corrigerBtn");
+const boutonRecommencer = document.getElementById("restartBtn");
 
-  submitBtn: document.getElementById("submitBtn"),
-  corrigerBtn: document.getElementById("corrigerBtn"),
-  restartBtn: document.getElementById("restartBtn"),
-
-  dernierScore: document.getElementById("dernierScore"),
-  score: document.getElementById("score"),
-};
-
-const scoreSauvegarder = localStorage.getItem("dernierScoreQuiz");
-
-if (scoreSauvegarder !== null) {
-  elements.dernierScore.textContent =
-    "Dernier score : " + scoreSauvegarder + "/5";
+const ancienScore = localStorage.getItem("dernierScoreQuiz");
+if (ancienScore !== null) {
+  zoneDernierScore.textContent = "Dernier score : " + ancienScore + "/5";
 }
 
-elements.submitBtn.addEventListener("click", () => {
-  let score = 0;
-  if (elements.correct1.checked) {
-    score++;
+async function loadData() {
+  try {
+    const response = await fetch("question.json");
+    const questions = await response.json();
+    afficherQuestions(questions);
+  } catch (error) {
+    console.error("Erreur lors du chargement :", error);
+    alert("Impossible de charger les questions !");
   }
-  if (elements.correct2.checked) {
-    score++;
-  }
-  if (elements.correct3.checked) {
-    score++;
-  }
-  if (
-    elements.correct4a.checked ||
-    elements.correct4b.checked ||
-    elements.correct4c.checked ||
-    elements.correct4d.checked
-  ) {
-    score++;
-  }
-  if (elements.correct5.checked) {
-    score++;
-  }
-  localStorage.setItem("dernierScoreQuiz", score);
-  elements.score.textContent = "Ton score : " + score + "/5";
-});
-elements.corrigerBtn.addEventListener("click", () => {
-  const toutesReponses = document.querySelectorAll("input[type='radio']");
-  // Liste des bonnes réponses d'après elements
-  const bonnes = [
-    elements.correct1,
-    elements.correct2,
-    elements.correct3,
-    elements.correct4a,
-    elements.correct4b,
-    elements.correct4c,
-    elements.correct4d,
-    elements.correct5,
-  ];
+}
 
-  // Mettre les bonnes réponses en vert
-  bonnes.forEach((rep) => {
-    rep.parentElement.style.color = "green";
+loadData();
+
+
+
+function melanger(tab) {
+  let copie = [...tab];
+  for (let i = copie.length - 1; i > 0; i--) {
+
+    let j = Math.floor(Math.random() * (i + 1));
+
+    [copie[i], copie[j]] = [copie[j], copie[i]];
+  }
+  return copie;
+}
+
+
+function afficherQuestions(listeQuestions) {
+
+
+  const questions = melanger(listeQuestions).slice(0, 5);
+
+  questions.forEach((question, numero) => {
+
+
+    const txtQuestion = document.getElementById("question" + (numero + 1));
+    txtQuestion.textContent = question.question;
+
+    for (let i = 1; i <= 4; i++) {
+
+      const bouton = document.getElementById(`q${numero + 1}r${i}`);
+      const label = bouton.parentElement;
+      label.innerHTML = "";
+      label.appendChild(bouton);
+      label.append(" " + question.options[i - 1]);
+      bouton.dataset.bonne = (i - 1 === question.correctIndex);
+    }
   });
+}
 
-  // Mettre les mauvaises réponses en rouge
-  toutesReponses.forEach((rep) => {
-    if (!bonnes.includes(rep)) {
-      rep.parentElement.style.color = "red";
+
+
+boutonValider.addEventListener("click", () => {
+
+  let score = 0;
+  const boutons = document.querySelectorAll("input[type='radio']");
+
+  boutons.forEach(bouton => {
+    if (bouton.checked && bouton.dataset.bonne === "true") {
+      score++;
+    }
+  });
+  zoneScore.textContent = "Score : " + score + "/5";
+
+  localStorage.setItem("dernierScoreQuiz", score);
+});
+
+
+boutonCorriger.addEventListener("click", () => {
+
+  const boutons = document.querySelectorAll("input[type='radio']");
+
+  boutons.forEach(bouton => {
+    if (bouton.dataset.bonne === "true") {
+      bouton.parentElement.style.color = "green";
+    } else {
+      bouton.parentElement.style.color = "red";
     }
   });
 });
 
-elements.restartBtn.addEventListener("click", () => {
-  const toutesReponses = document.querySelectorAll("input[type='radio']");
-  toutesReponses.forEach((rep) => {
-    rep.checked = false;
-    rep.parentElement.style.color = "white";
-  });
-  elements.score.textContent = "";
-  elements.dernierScore.textContent = "";
-  localStorage.removeItem("dernierScoreQuiz");
+
+boutonRecommencer.addEventListener("click", () => {
+  location.reload();
 });
